@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="SampleMasterV2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+        <!--startbootstrap agency-->
+        <link href="bootstrap/css/styles.css" rel="stylesheet" />
+        <!--mdbootstrap-->
+        <link href="bootstrap/css/mdb.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 313px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+                <a class="navbar-brand img-fluid" href="HomePage.aspx"><img src="pics/logo1.png" alt="InkpressLogo" /></a>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsiveleft">
+                    <ul class="navbar-nav text-uppercase ms-auto py-6 py-lg-0 mr-auto">
+                        <li class="nav-item">
+                            <asp:LinkButton ID="AdminOrdersLink" runat="server" class="nav-link" OnClick="AdminOrdersLink_Click" CausesValidation="False">AdminOrders</asp:LinkButton></li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="AdminProductsLink" runat="server" class="nav-link" OnClick="AdminProductsLink_Click" CausesValidation="False">AdminProducts</asp:LinkButton></li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="AdminReviewsLink" runat="server" class="nav-link" OnClick="AdminReviewsLink_Click" CausesValidation="False">AdminReviews</asp:LinkButton></li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="AdminUsersLink" runat="server" class="nav-link" OnClick="AdminUsersLink_Click" CausesValidation="False">AdminUsers</asp:LinkButton></li>
+                    </ul>
+                    </div>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-6 py-lg-0">
+                        <li class="nav-item">
+                            <asp:LinkButton ID="OrderLink" runat="server" class="nav-link" OnClick="OrderLink_Click" CausesValidation="False">Order</asp:LinkButton></li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="ReviewLink" runat="server" class="nav-link" OnClick="ReviewLink_Click" CausesValidation="False">Reviews</asp:LinkButton></li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="LoginLink" runat="server" class="nav-link" OnClick="LoginLink_Click" CausesValidation="False">Login</asp:LinkButton></li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="RegisterLink" runat="server" class="nav-link" OnClick="RegisterLink_Click" CausesValidation="False">Register</asp:LinkButton></li>                      
+                        
+                        <li class="nav-item">
+                            
+                                <asp:LinkButton ID="ProfileLink" runat="server" class="nav-link"  data-mdb-toggle="dropdown" CausesValidation="False">Profile</asp:LinkButton>
+                             <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Profile.aspx">My Orders</a></li>
+                                <li><a class="dropdown-item" href="ReviewForm.aspx">Leave A Review</a></li>
+                                <li><a class="dropdown-item" href="ChangeInfo.aspx">Edit My Information</a></li>
+                             </ul>
+
+
+
+                        </li>
+                                
+                                
+                        <li class="nav-item">
+                            <asp:LinkButton ID="LogoutButton" runat="server" class="nav-link" OnClick="LogoutButton_Click" CausesValidation="False">Log Out</asp:LinkButton></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+           <!-- Footer-->
+        <footer class="footer py-4 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Website 2023</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="mx-2" href="https://shopee.ph/inkpress.solutions?fbclid=IwAR2L-Q2h-5cL49Y_y6tS-NrJbJmdYTScb_L8LwU9wbGGTP5XjBsSIfWfe50"><img src="pics/shopeefooter2.svg" alt="shopee logo" /></a>
+                        <a class="mx-2" href="https://www.facebook.com/inkpress.solutions" ><img src="pics/facebookfooter.svg" alt="facebook logo" /></a>
+                        <a class="mx-2" href="#!" ><img src="pics/gmailfooter.svg" alt="gmail logo" /></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-light text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-light text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/scripts.js"></script>
+    <script src="bootstrap/js/mdb.min.js"></script>
+</body>
+</html>
